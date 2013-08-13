@@ -15,11 +15,16 @@
   <uses-permission android:name="android.permission.INTERNET"/>
   <!-- End of C2DM permissions -->
 
+  <!-- Oauth for goodreads-->
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+
+
   <application
       android:label="@string/app_name"
       android:icon="@drawable/icon"
-      android:name=".MySampleApplication">
-    <activity android:name=".StarterActivity"
+      android:name=".OpplGoodreadsApplication">
+    <activity android:name=".StartActivity"
               android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

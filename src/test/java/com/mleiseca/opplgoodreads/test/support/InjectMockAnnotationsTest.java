@@ -1,7 +1,7 @@
 package com.mleiseca.opplgoodreads.test.support;
 
-import com.mleiseca.opplgoodreads.MySampleApplication;
-import com.mleiseca.opplgoodreads.StarterActivity;
+import com.mleiseca.opplgoodreads.OpplGoodreadsApplication;
+import com.mleiseca.opplgoodreads.StartActivity;
 import com.mleiseca.opplgoodreads.util.CurrentTime;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ public class InjectMockAnnotationsTest {
     CurrentTime mockCurrentTime;
 
     private void injectMocks() {
-        MySampleApplication application = (MySampleApplication) Robolectric.application;
+        OpplGoodreadsApplication application = (OpplGoodreadsApplication) Robolectric.application;
         InjectMockModule module = new InjectMockModule();
         InjectMockAnnotations.initInjectMocks(this.getClass(), module, this);
 
@@ -32,7 +32,7 @@ public class InjectMockAnnotationsTest {
     @Test
     public void fieldAnnotatedWith_InjectMock_shouldBeSetToMocksOfTheCorrectType() throws Exception {
         injectMocks();
-        StarterActivity myActivity = new StarterActivity();
+        StartActivity myActivity = new StartActivity();
 
         myActivity.onCreate(null);
 

@@ -14,6 +14,9 @@
     <option name="NETWORK_LATENCY" value="none" />
     <option name="CLEAR_LOGCAT" value="false" />
     <RunnerSettings RunnerId="AndroidDebugRunner" />
+    <RunnerSettings RunnerId="Profile ">
+      <option name="myExternalizedOptions" />
+    </RunnerSettings>
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
     <ConfigurationWrapper RunnerId="Run" />

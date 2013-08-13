@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OpplGoodreads</string>
+    <string name="home_title">Chicagoland Reads</string>
+    <string name="home_login">Login to Goodreads</string>
+    <string name="home_helpful_text">Here\'s a description of what the app does a description of what the app does a description of what the app does a description of what the app does a description of what the app does</string>
 </resources>

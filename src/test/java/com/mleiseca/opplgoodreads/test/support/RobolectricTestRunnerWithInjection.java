@@ -1,7 +1,7 @@
 package com.mleiseca.opplgoodreads.test.support;
 
 import com.mleiseca.opplgoodreads.ApplicationModule;
-import com.mleiseca.opplgoodreads.MySampleApplication;
+import com.mleiseca.opplgoodreads.OpplGoodreadsApplication;
 import com.mleiseca.opplgoodreads.util.CurrentTime;
 import org.junit.runners.model.InitializationError;
 import org.mockito.MockitoAnnotations;
@@ -35,7 +35,7 @@ public class RobolectricTestRunnerWithInjection extends RobolectricTestRunner {
     public static class TestLifeCycleWithInjection extends DefaultTestLifecycle {
         @Override
         public void prepareTest(Object test) {
-            MySampleApplication application = (MySampleApplication) Robolectric.application;
+            OpplGoodreadsApplication application = (OpplGoodreadsApplication) Robolectric.application;
 
 
             RoboGuice.setBaseApplicationInjector(application, RoboGuice.DEFAULT_STAGE,

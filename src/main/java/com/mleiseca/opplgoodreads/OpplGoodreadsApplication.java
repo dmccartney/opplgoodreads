@@ -3,7 +3,7 @@ package com.mleiseca.opplgoodreads;
 import android.app.Application;
 import roboguice.RoboGuice;
 
-public class MySampleApplication extends Application {
+public class OpplGoodreadsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
