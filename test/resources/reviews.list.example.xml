@@ -1,0 +1,1192 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+    <Request>
+        <authentication>true</authentication>
+        <key><![CDATA[7yDxHo2vx9QNZWrFOM9oA]]></key>
+        <method><![CDATA[review_list]]></method>
+    </Request>
+    <reviews start="1" end="20" total="379">
+        <review>
+            <id>694777948</id>
+            <book>
+                <id type="integer">1162463</id>
+                <isbn>0517116022</isbn>
+                <isbn13>9780517116029</isbn13>
+                <text_reviews_count type="integer">0</text_reviews_count>
+                <title>Eyeball to Eyeball</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/1162463.Eyeball_to_Eyeball</link>
+                <num_pages></num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>Random House Value Publishing</publisher>
+                <publication_day>6</publication_day>
+                <publication_year>1995</publication_year>
+                <publication_month>5</publication_month>
+                <average_rating>4.20</average_rating>
+                <ratings_count>5</ratings_count>
+                <description></description>
+                <authors>
+                    <author>
+                        <id>568279</id>
+                        <name>Dino A. Brugioni</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/568279.Dino_A_Brugioni]]></link>
+                        <average_rating>3.33</average_rating>
+                        <ratings_count>15</ratings_count>
+                        <text_reviews_count>1</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1995</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Aug 14 10:54:03 -0700 2013</date_added>
+            <date_updated>Wed Aug 14 10:54:03 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/694777948]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/694777948]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>690188884</id>
+            <book>
+                <id type="integer">6402713</id>
+                <isbn>0674032942</isbn>
+                <isbn13>9780674032941</isbn13>
+                <text_reviews_count type="integer">20</text_reviews_count>
+                <title>Hope and Despair in the American City: Why There Are No Bad Schools in Raleigh</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/6402713-hope-and-despair-in-the-american-city</link>
+                <num_pages>226</num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>Harvard University Press</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>2009</publication_year>
+                <publication_month>5</publication_month>
+                <average_rating>3.70</average_rating>
+                <ratings_count>53</ratings_count>
+                <description>In 1972, the U.S. Supreme Court handed down a 5-4 verdict in the case of Milliken v. Bradley, thereby blocking the state of Michigan from merging the Detroit public school system with those of the surrounding suburbs. This decision effectively walled off underprivileged students in many American cities, condemning them to a system of racial and class segregation and destroying their chances of obtaining a decent education.&lt;br /&gt;&lt;br /&gt;In "Hope and Despair, " Gerald Grant compares two cities--his hometown of Syracuse, New York, and Raleigh, North Carolina--in order to examine the consequences of the nation's ongoing educational inequities. The school system in Syracuse is a slough of despair, the one in Raleigh a beacon of hope. Grant argues that the chief reason for Raleigh's educational success is the integration by social class that occurred when the city voluntarily merged with the surrounding suburbs in 1976 to create the Wake County Public School System. By contrast, the primary cause of Syracuse's decline has been the growing class and racial segregation of its metropolitan schools, which has left the city mired in poverty.&lt;br /&gt;&lt;br /&gt;"Hope and Despair" is a compelling study of urban social policy that combines field research and historical narrative in lucid and engaging prose. The result is an ambitious portrait--sometimes disturbing, often inspiring--of two cities that exemplify our nation's greatest educational challenges, as well as a passionate exploration of the potential for school reform that exists for our urban schools today.</description>
+                <authors>
+                    <author>
+                        <id>526389</id>
+                        <name>Gerald Grant</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/526389.Gerald_Grant]]></link>
+                        <average_rating>3.47</average_rating>
+                        <ratings_count>90</ratings_count>
+                        <text_reviews_count>23</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2009</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Fri Aug 09 06:38:30 -0700 2013</date_added>
+            <date_updated>Fri Aug 09 06:38:30 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/690188884]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/690188884]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>687172724</id>
+            <book>
+                <id type="integer">3850</id>
+                <isbn>0226443221</isbn>
+                <isbn13>9780226443225</isbn13>
+                <text_reviews_count type="integer">29</text_reviews_count>
+                <title>Heat Wave: A Social Autopsy of Disaster in Chicago</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328873663m/3850.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328873663s/3850.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/3850.Heat_Wave</link>
+                <num_pages>320</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>University Of Chicago Press</publisher>
+                <publication_day>15</publication_day>
+                <publication_year>2003</publication_year>
+                <publication_month>7</publication_month>
+                <average_rating>3.81</average_rating>
+                <ratings_count>304</ratings_count>
+                <description>On Thursday, July 13, 1995, Chicagoans awoke to a blistering day in which the temperature would reach 106 degrees. The heat index, which measures how the temperature actually feels on the body, would hit 126 degrees by the time the day was over. Meteorologists had been warning residents about a two-day heat wave, but these temperatures did not end that soon. When the heat wave broke a week later, city streets had buckled; the records for electrical use were shattered; and power grids had failed, leaving residents without electricity for up to two days. And by July 20, over seven hundred people had perished-more than twice the number that died in the Chicago Fire of 1871, twenty times the number of those struck by Hurricane Andrew in 1992—in the great Chicago heat wave, one of the deadliest in American history.&lt;br /&gt;&lt;br /&gt;Heat waves in the United States kill more people during a typical year than all other natural disasters combined. Until now, no one could explain either the overwhelming number or the heartbreaking manner of the deaths resulting from the 1995 Chicago heat wave. Meteorologists and medical scientists have been unable to account for the scale of the trauma, and political officials have puzzled over the sources of the city's vulnerability. In &lt;em&gt;Heat Wave&lt;/em&gt;, Eric Klinenberg takes us inside the anatomy of the metropolis to conduct what he calls a "social autopsy," examining the social, political, and institutional organs of the city that made this urban disaster so much worse than it ought to have been.&lt;br /&gt;&lt;br /&gt;Starting with the question of why so many people died at home alone, Klinenberg investigates why some neighborhoods experienced greater mortality than others, how the city government responded to the crisis, and how journalists, scientists, and public officials reported on and explained these events. Through a combination of years of fieldwork, extensive interviews, and archival research, Klinenberg uncovers how a number of surprising and unsettling forms of social breakdown—including the literal and social isolation of seniors, the institutional abandonment of poor neighborhoods, and the retrenchment of public assistance programs—contributed to the high fatality rates. The human catastrophe, he argues, cannot simply be blamed on the failures of any particular individuals or organizations. For when hundreds of people die behind locked doors and sealed windows, out of contact with friends, family, community groups, and public agencies, everyone is implicated in their demise.&lt;br /&gt;&lt;br /&gt;As Klinenberg demonstrates in this incisive and gripping account of the contemporary urban condition, the widening cracks in the social foundations of American cities that the 1995 Chicago heat wave made visible have by no means subsided as the temperatures returned to normal. The forces that affected Chicago so disastrously remain in play in America's cities, and we ignore them at our peril.</description>
+                <authors>
+                    <author>
+                        <id>2611</id>
+                        <name>Eric Klinenberg</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332895127p5/2611.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332895127p2/2611.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/2611.Eric_Klinenberg]]></link>
+                        <average_rating>3.53</average_rating>
+                        <ratings_count>1166</ratings_count>
+                        <text_reviews_count>217</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2003</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Mon Aug 05 20:13:05 -0700 2013</date_added>
+            <date_updated>Mon Aug 05 20:13:06 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/687172724]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/687172724]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>687171659</id>
+            <book>
+                <id type="integer">168232</id>
+                <isbn>0226162346</isbn>
+                <isbn13>9780226162348</isbn13>
+                <text_reviews_count type="integer">1</text_reviews_count>
+                <title>Black Metropolis</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328874742m/168232.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328874742s/168232.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/168232.Black_Metropolis</link>
+                <num_pages>910</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>University Of Chicago Press</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>1993</publication_year>
+                <publication_month>8</publication_month>
+                <average_rating>4.09</average_rating>
+                <ratings_count>32</ratings_count>
+                <description>Ground-breaking when first published in 1945, &lt;em&gt;Black Metropolis&lt;/em&gt; remains a landmark study of race and urban life. Based on a mass of research conducted by Works Progress Administration field workers in the late 1930s, it is a historical and sociological account of the people of Chicago's South Side, the classic urban ghetto. Drake and Cayton's findings not only offer a generalized analysis of black migration, settlement, community structure, and black-white race relations in the early part of the twentieth century, but also tell us what has changed in the last hundred years and what has not. This edition includes the original Introduction by Richard Wright and a new Foreword by William Julius Wilson.&lt;br /&gt;&lt;br /&gt;"&lt;em&gt;Black Metropolis&lt;/em&gt; is a rare combination of research and synthesis, a book to be deeply pondered. . . . No one who reads it intelligently can ever believe again that our racial dilemma can be solved by pushing buttons, or by gradual processes which may reach four or five hundred years into the future."—Bucklin Moon, &lt;em&gt;The Nation&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;"This volume makes a great contribution to the building of the future American and the free world."—Louis Wirth, &lt;em&gt;New York Times&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;"By virtue of its range, its labor and its insight, the book seems certain to become a landmark not only in race studies but in the broader field of social anthropology."—Thomas Sancton, &lt;em&gt;New Republic&lt;/em&gt;</description>
+                <authors>
+                    <author>
+                        <id>97919</id>
+                        <name>St. Clair Drake</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/97919.St_Clair_Drake]]></link>
+                        <average_rating>4.12</average_rating>
+                        <ratings_count>34</ratings_count>
+                        <text_reviews_count>1</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1993</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Mon Aug 05 20:11:43 -0700 2013</date_added>
+            <date_updated>Mon Aug 05 20:11:43 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/687171659]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/687171659]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>687170309</id>
+            <book>
+                <id type="integer">62578</id>
+                <isbn>0226901319</isbn>
+                <isbn13>9780226901312</isbn13>
+                <text_reviews_count type="integer">8</text_reviews_count>
+                <title>The Truly Disadvantaged: The Inner City, the Underclass, and Public Policy</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/62578.The_Truly_Disadvantaged</link>
+                <num_pages>261</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>University Of Chicago Press</publisher>
+                <publication_day>15</publication_day>
+                <publication_year>1990</publication_year>
+                <publication_month>10</publication_month>
+                <average_rating>3.74</average_rating>
+                <ratings_count>141</ratings_count>
+                <description>"&lt;em&gt;The Truly Disadvantaged&lt;/em&gt; should spur critical thinking in many quarters about the causes and possible remedies for inner city poverty. As policy makers grapple with the problems of an enlarged underclass they—as well as community leaders and all concerned Americans of all races—would be advised to examine Mr. Wilson's incisive analysis."—Robert Greenstein, &lt;em&gt;New York Times Book Review&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;"'Must reading' for civil-rights leaders, leaders of advocacy organizations for the poor, and for elected officials in our major urban centers."—Bernard C. Watson, &lt;em&gt;Journal of Negro Education&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;"Required reading for anyone, presidential candidate or private citizen, who really wants to address the growing plight of the black urban underclass."—David J. Garrow, &lt;em&gt;Washington Post Book World&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;Selected by the editors of the &lt;em&gt;New York Times Book Review&lt;/em&gt; as one of the sixteen best books of 1987.&lt;br /&gt;Winner of the 1988 C. Wright Mills Award of the Society for the Study of Social Problems.</description>
+                <authors>
+                    <author>
+                        <id>3262</id>
+                        <name>William Julius Wilson</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-200x266-3cf466df0830456e9cb1b41fe62786ab.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-50x66-e07624dc012f2cce49c7d9aa6500c6c0.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/3262.William_Julius_Wilson]]></link>
+                        <average_rating>3.66</average_rating>
+                        <ratings_count>1201</ratings_count>
+                        <text_reviews_count>134</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1990</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Mon Aug 05 20:10:07 -0700 2013</date_added>
+            <date_updated>Mon Aug 05 20:10:07 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/687170309]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/687170309]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>687169538</id>
+            <book>
+                <id type="integer">120365</id>
+                <isbn>0679724176</isbn>
+                <isbn13>9780679724179</isbn13>
+                <text_reviews_count type="integer">30</text_reviews_count>
+                <title>When Work Disappears: The World of the New Urban Poor</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/120365.When_Work_Disappears</link>
+                <num_pages>352</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Vintage</publisher>
+                <publication_day>29</publication_day>
+                <publication_year>1997</publication_year>
+                <publication_month>7</publication_month>
+                <average_rating>3.70</average_rating>
+                <ratings_count>306</ratings_count>
+                <description>Wilson, one of our foremost authorities on race and poverty, challenges decades of liberal and conservative pieties to look squarely at the devastating effects that joblessness has had on our urban ghettos. Marshaling a vast array of data and the personal stories of hundreds of men and women, Wilson persuasively argues that problems endemic to America's inner cities;from fatherless households to drugs and violent crime.&lt;br /&gt;Wilson's achievement is to portray this crisis as one that affects all Americans, and to propose solutions whose benefits would be felt across our society. At a time when welfare is ending and our country's racial dialectic is more strained than ever.</description>
+                <authors>
+                    <author>
+                        <id>3262</id>
+                        <name>William Julius Wilson</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-200x266-3cf466df0830456e9cb1b41fe62786ab.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-50x66-e07624dc012f2cce49c7d9aa6500c6c0.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/3262.William_Julius_Wilson]]></link>
+                        <average_rating>3.66</average_rating>
+                        <ratings_count>1201</ratings_count>
+                        <text_reviews_count>134</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1997</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Mon Aug 05 20:09:08 -0700 2013</date_added>
+            <date_updated>Mon Aug 05 20:09:08 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/687169538]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/687169538]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>682369458</id>
+            <book>
+                <id type="integer">13055451</id>
+                <isbn>1848547218</isbn>
+                <isbn13>9781848547445</isbn13>
+                <text_reviews_count type="integer">131</text_reviews_count>
+                <title>Inside Apple</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1330726595m/13055451.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1330726595s/13055451.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/13055451-inside-apple</link>
+                <num_pages>240</num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>John Murray Publishers</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>2012</publication_year>
+                <publication_month>1</publication_month>
+                <average_rating>3.54</average_rating>
+                <ratings_count>1262</ratings_count>
+                <description>INSIDE APPLE reveals the secret systems, tactics and leadership strategies that allowed Steve Jobs and his company to churn out hit after hit and inspire a cult-like following for its products. &lt;br /&gt;If Apple is Silicon Valley's answer to Willy Wonka's Chocolate Factory, then author Adam Lashinsky provides readers with a golden ticket to step inside. In this primer on leadership and innovation, the author will introduce readers to concepts like the "DRI" (Apple's practice of assigning a Directly Responsible Individual to every task) and the Top 100 (an annual ritual in which 100 up-and-coming executives are tapped a la Skull &amp;amp; Bones for a secret retreat with company founder Steve Jobs). &lt;br /&gt;Based on numerous interviews, the book offers exclusive new information about how Apple innovates, deals with its suppliers and is handling the transition into the Post Jobs Era. Lashinsky, a Senior Editor at Large for Fortune, knows the subject cold: In a 2008 cover story for the magazine entitled The Genius Behind Steve: Could Operations Whiz Tim Cook Run The Company Someday he predicted that Tim Cook, then an unknown, would eventually succeed Steve Jobs as CEO. &lt;br /&gt;While Inside Apple is ostensibly a deep dive into one, unique company (and its ecosystem of suppliers, investors, employees and competitors), the lessons about Jobs, leadership, product design and marketing are universal. They should appeal to anyone hoping to bring some of that Apple magic to their own company, career, or creative endeavor.</description>
+                <authors>
+                    <author>
+                        <id>4851547</id>
+                        <name>Adam Lashinsky</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-200x266-3cf466df0830456e9cb1b41fe62786ab.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-50x66-e07624dc012f2cce49c7d9aa6500c6c0.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/4851547.Adam_Lashinsky]]></link>
+                        <average_rating>3.54</average_rating>
+                        <ratings_count>1262</ratings_count>
+                        <text_reviews_count>167</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2012</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Jul 31 12:06:15 -0700 2013</date_added>
+            <date_updated>Wed Jul 31 12:06:16 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/682369458]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/682369458]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>682276640</id>
+            <book>
+                <id type="integer">89158</id>
+                <isbn>0691128715</isbn>
+                <isbn13>9780691128719</isbn13>
+                <text_reviews_count type="integer">12</text_reviews_count>
+                <title>Expert Political Judgment: How Good Is It? How Can We Know?</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/89158.Expert_Political_Judgment</link>
+                <num_pages>321</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Princeton University Press</publisher>
+                <publication_day>31</publication_day>
+                <publication_year>2006</publication_year>
+                <publication_month>7</publication_month>
+                <average_rating>4.27</average_rating>
+                <ratings_count>59</ratings_count>
+                <description>The intelligence failures surrounding the invasion of Iraq dramatically illustrate the necessity of developing standards for evaluating expert opinion. This book fills that need. Here, Philip E. Tetlock explores what constitutes good judgment in predicting future events, and looks at why experts are often wrong in their forecasts.&lt;br /&gt;&lt;br /&gt;Tetlock first discusses arguments about whether the world is too complex for people to find the tools to understand political phenomena, let alone predict the future. He evaluates predictions from experts in different fields, comparing them to predictions by well-informed laity or those based on simple extrapolation from current trends. He goes on to analyze which styles of thinking are more successful in forecasting. Classifying thinking styles using Isaiah Berlin's prototypes of the fox and the hedgehog, Tetlock contends that the fox--the thinker who knows many little things, draws from an eclectic array of traditions, and is better able to improvise in response to changing events--is more successful in predicting the future than the hedgehog, who knows one big thing, toils devotedly within one tradition, and imposes formulaic solutions on ill-defined problems. He notes a perversely inverse relationship between the best scientific indicators of good judgement and the qualities that the media most prizes in pundits--the single-minded determination required to prevail in ideological combat.&lt;br /&gt;&lt;br /&gt;Clearly written and impeccably researched, the book fills a huge void in the literature on evaluating expert opinion. It will appeal across many academic disciplines as well as to corporations seeking to develop standards for judging expert decision-making.</description>
+                <authors>
+                    <author>
+                        <id>51185</id>
+                        <name>Philip E. Tetlock</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/51185.Philip_E_Tetlock]]></link>
+                        <average_rating>4.13</average_rating>
+                        <ratings_count>71</ratings_count>
+                        <text_reviews_count>13</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2006</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Jul 31 10:17:36 -0700 2013</date_added>
+            <date_updated>Wed Jul 31 10:17:36 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/682276640]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/682276640]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>682104017</id>
+            <book>
+                <id type="integer">186749</id>
+                <isbn>0809058405</isbn>
+                <isbn13>9780809058402</isbn13>
+                <text_reviews_count type="integer">136</text_reviews_count>
+                <title>Innumeracy: Mathematical Illiteracy and Its Consequences</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1312035833m/186749.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1312035833s/186749.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/186749.Innumeracy</link>
+                <num_pages>208</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Hill and Wang</publisher>
+                <publication_day>18</publication_day>
+                <publication_year>2001</publication_year>
+                <publication_month>8</publication_month>
+                <average_rating>3.82</average_rating>
+                <ratings_count>1653</ratings_count>
+                <description>Dozens of examples in innumeracy show us how it affects not only personal economics and travel plans, but explains mis-chosen mates, inappropriate drug-testing, and the allure of pseudo-science.</description>
+                <authors>
+                    <author>
+                        <id>32711</id>
+                        <name>John Allen Paulos</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-200x266-3cf466df0830456e9cb1b41fe62786ab.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-M-50x66-e07624dc012f2cce49c7d9aa6500c6c0.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/32711.John_Allen_Paulos]]></link>
+                        <average_rating>3.67</average_rating>
+                        <ratings_count>3492</ratings_count>
+                        <text_reviews_count>323</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2001</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Jul 31 06:18:10 -0700 2013</date_added>
+            <date_updated>Wed Jul 31 06:18:11 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/682104017]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/682104017]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>682103649</id>
+            <book>
+                <id type="integer">51291</id>
+                <isbn>0393310728</isbn>
+                <isbn13>9780393310726</isbn13>
+                <text_reviews_count type="integer">179</text_reviews_count>
+                <title>How to Lie with Statistics</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/51291.How_to_Lie_with_Statistics</link>
+                <num_pages>144</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>W. W. Norton &amp; Company</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>1982</publication_year>
+                <publication_month>9</publication_month>
+                <average_rating>3.82</average_rating>
+                <ratings_count>1434</ratings_count>
+                <description>Darrell Huff runs the gamut of every popularly used type of statistic, probes such things as the sample study, the tabulation method, the interview technique, or the way results are derived from the figures, and points up the countless number of dodges which are used to fool rather than to inform.</description>
+                <authors>
+                    <author>
+                        <id>28848</id>
+                        <name>Darrell Huff</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/28848.Darrell_Huff]]></link>
+                        <average_rating>3.82</average_rating>
+                        <ratings_count>1458</ratings_count>
+                        <text_reviews_count>210</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1982</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Jul 31 06:17:32 -0700 2013</date_added>
+            <date_updated>Wed Jul 31 06:17:32 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/682103649]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/682103649]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>680625152</id>
+            <book>
+                <id type="integer">106164</id>
+                <isbn>0452265886</isbn>
+                <isbn13>9780452265882</isbn13>
+                <text_reviews_count type="integer">40</text_reviews_count>
+                <title>The Medical Detectives</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/106164.The_Medical_Detectives</link>
+                <num_pages>432</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Plume</publisher>
+                <publication_day>30</publication_day>
+                <publication_year>1991</publication_year>
+                <publication_month>3</publication_month>
+                <average_rating>4.19</average_rating>
+                <ratings_count>368</ratings_count>
+                <description>What do Lyme's disease in Long Island, a pig from New Jersey, and an amateur pianist have in common? All are subjects in three of 25 utterly fascinating tales of strange illnesses, rare diseases, poisons, and parasites - each tale a thriller of medical suspense by the incomparable Berton Roueche'. Roueche's true narratives have long been favorites for readers of "The New Yorker." Now the best of these articles are collected here to astound new readers with intriguing tales of epidemics in Americas small towns, threats of contagion in our biggest cities, even bubonic plague in a peaceful urban park.</description>
+                <authors>
+                    <author>
+                        <id>61440</id>
+                        <name>Berton Roueche</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/61440.Berton_Roueche]]></link>
+                        <average_rating>4.07</average_rating>
+                        <ratings_count>599</ratings_count>
+                        <text_reviews_count>76</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1991</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Mon Jul 29 15:05:34 -0700 2013</date_added>
+            <date_updated>Mon Jul 29 15:05:34 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/680625152]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/680625152]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>678559720</id>
+            <book>
+                <id type="integer">141560</id>
+                <isbn>0385339038</isbn>
+                <isbn13>9780385339032</isbn13>
+                <text_reviews_count type="integer">110</text_reviews_count>
+                <title>Screenplay: The Foundations of Screenwriting</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/141560.Screenplay</link>
+                <num_pages>336</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Delta</publisher>
+                <publication_day>29</publication_day>
+                <publication_year>2005</publication_year>
+                <publication_month>11</publication_month>
+                <average_rating>3.78</average_rating>
+                <ratings_count>1618</ratings_count>
+                <description>A generation of screenwriters has used Syd Field’s bestselling books to ignite successful careers in film. Now the celebrated producer, lecturer, teacher, and bestselling author has updated his classic guide for a new generation of filmmakers, offering a fresh insider’s perspective on the film industry today. From concept to character, from opening scene to finished script, here are easily understood guidelines to help aspiring screenwriters—from novices to practiced writers—hone their craft. Filled with updated material—including all-new personal anecdotes and insights, guidelines on marketing and collaboration, plus analyses of recent films, from&lt;em&gt; American Beauty&lt;/em&gt; to&lt;em&gt; Lord of the Rings&lt;/em&gt;—&lt;strong&gt;Screenplay&lt;/strong&gt; presents a step-by-step, comprehensive technique for writing the screenplay that will succeed in Hollywood. Discover:&lt;br /&gt;&lt;br /&gt;•Why the first ten pages of your script are crucially important&lt;br /&gt;•How to visually “grab” the reader from page one, word one &lt;br /&gt;•Why structure and character are the essential foundation of your screenplay&lt;br /&gt;•How to adapt a novel, a play, or an article into a screenplay&lt;br /&gt;•Tips on protecting your work—three legal ways to claim ownership of your screenplay&lt;br /&gt;•The essentials of writing great dialogue, creating character, building a story line, overcoming writer’s block, getting an agent, and much more.&lt;br /&gt;&lt;br /&gt;With this newly updated edition of his bestselling classic, Syd Field proves yet again why he is revered as the master of the screenplay—and why his celebrated guide has become the industry’s gold standard for successful screenwriting.</description>
+                <authors>
+                    <author>
+                        <id>81615</id>
+                        <name>Syd Field</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1343212719p5/81615.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1343212719p2/81615.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/81615.Syd_Field]]></link>
+                        <average_rating>3.72</average_rating>
+                        <ratings_count>2356</ratings_count>
+                        <text_reviews_count>192</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2005</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Sat Jul 27 07:13:48 -0700 2013</date_added>
+            <date_updated>Sat Jul 27 07:13:49 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/678559720]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/678559720]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>678558062</id>
+            <book>
+                <id type="integer">49464</id>
+                <isbn>1932907009</isbn>
+                <isbn13>9781932907001</isbn13>
+                <text_reviews_count type="integer">355</text_reviews_count>
+                <title>Save the Cat!: The Last Book on Screenwriting You'll Ever Need</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/49464.Save_the_Cat_</link>
+                <num_pages/>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Michael Wiese Productions</publisher>
+                <publication_day>25</publication_day>
+                <publication_year>2005</publication_year>
+                <publication_month>5</publication_month>
+                <average_rating>4.12</average_rating>
+                <ratings_count>2377</ratings_count>
+                <description>This ultimate insider's guide reveals the secrets that none dare admit, told by a show biz veteran who's proven that you can sell your script if you can save the cat!</description>
+                <authors>
+                    <author>
+                        <id>27856</id>
+                        <name>Blake Snyder</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1250045933p5/27856.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1250045933p2/27856.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/27856.Blake_Snyder]]></link>
+                        <average_rating>4.12</average_rating>
+                        <ratings_count>3002</ratings_count>
+                        <text_reviews_count>427</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2005</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Sat Jul 27 07:11:04 -0700 2013</date_added>
+            <date_updated>Sat Jul 27 07:11:04 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/678558062]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/678558062]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>678313361</id>
+            <book>
+                <id type="integer">238701</id>
+                <isbn>0691034591</isbn>
+                <isbn13>9780691034591</isbn13>
+                <text_reviews_count type="integer">5</text_reviews_count>
+                <title>Pricing the Priceless Child: The Changing Social Value of Children</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/238701.Pricing_the_Priceless_Child</link>
+                <num_pages>296</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Princeton University Press</publisher>
+                <publication_day>8</publication_day>
+                <publication_year>1994</publication_year>
+                <publication_month>8</publication_month>
+                <average_rating>3.92</average_rating>
+                <ratings_count>36</ratings_count>
+                <description>In this landmark book, sociologist Viviana Zelizer traces the emergence of the modern child, at once economically "useless" and emotionally "priceless," from the late 1800s to the 1930s. Having established laws removing many children from the marketplace, turn-of-the-century America was discovering new, sentimental criteria to determine a child's monetary worth. The heightened emotional status of children resulted, for example, in the legal justification of children's life insurance policies and in large damages awarded by courts to their parents in the event of death. A vivid account of changing attitudes toward children, this book dramatically illustrates the limits of economic views of life that ignore the pervasive role of social, cultural, emotional, and moral factors in our marketplace world.</description>
+                <authors>
+                    <author>
+                        <id>139706</id>
+                        <name>Viviana A. Zelizer</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/139706.Viviana_A_Zelizer]]></link>
+                        <average_rating>3.82</average_rating>
+                        <ratings_count>77</ratings_count>
+                        <text_reviews_count>9</text_reviews_count>
+                    </author>
+                </authors>
+                <published>1994</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Fri Jul 26 21:12:06 -0700 2013</date_added>
+            <date_updated>Fri Jul 26 21:12:06 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/678313361]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/678313361]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>675411334</id>
+            <book>
+                <id type="integer">1695302</id>
+                <isbn>1920694897</isbn>
+                <isbn13>9781920694890</isbn13>
+                <text_reviews_count type="integer">0</text_reviews_count>
+                <title>A Distant Grief: Australians, War Graves And The Great War</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1356494917m/1695302.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1356494917s/1695302.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/1695302.A_Distant_Grief</link>
+                <num_pages/>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>University of Western Australia Press</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>2007</publication_year>
+                <publication_month>3</publication_month>
+                <average_rating>0.0</average_rating>
+                <ratings_count>0</ratings_count>
+                <description>Sixty thousand Australians died during the First World War. This book is the first major study to examine the roles of war graves and cemeteries in private grief and mourning, through archival research of the Commonwealth War Graves Commission, the organization responsible for commemorating the million soldiers of the British Empire who died in the war. A Distant Grief reorients and enriches international discussion of reactions to death and commemoration during, and after, the First World War. The author, Bart Ziino, has written on war memorials, Gallipoli, and the Australian memory of war. The thesis on which this book is based won the 2005 Australian Historical Association's Serle Award for the best thesis in Australian History.</description>
+                <authors>
+                    <author>
+                        <id>780983</id>
+                        <name>Bart Ziino</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/780983.Bart_Ziino]]></link>
+                        <average_rating>0.0</average_rating>
+                        <ratings_count>0</ratings_count>
+                        <text_reviews_count>0</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2007</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Tue Jul 23 15:39:21 -0700 2013</date_added>
+            <date_updated>Tue Jul 23 15:39:21 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/675411334]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/675411334]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>673557345</id>
+            <book>
+                <id type="integer">7865235</id>
+                <isbn>1595584897</isbn>
+                <isbn13>9781595584892</isbn13>
+                <text_reviews_count type="integer">33</text_reviews_count>
+                <title>Losing Our Cool: Uncomfortable Truths About Our Air-Conditioned World</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328751702m/7865235.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1328751702s/7865235.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/7865235-losing-our-cool</link>
+                <num_pages>272</num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>New Press, The</publisher>
+                <publication_day>25</publication_day>
+                <publication_year>2010</publication_year>
+                <publication_month>5</publication_month>
+                <average_rating>3.40</average_rating>
+                <ratings_count>67</ratings_count>
+                <description>&lt;em&gt;Losing our Cool&lt;/em&gt; shows how indoor climate control is colliding with an out-of-control outdoor climate. In America, energy consumed by home air-conditioning, and the resulting greenhouse emissions, have doubled in just over a decade, and energy to cool retail stores has risen by two-thirds. Now the entire affluent world is adopting the technology. As the biggest economic crisis in eighty years rolls across the globe, financial concerns threaten to shove ecological crises into the background. Reporting from some of the world’s hot zones—from Phoenix, Arizona, and Naples, Florida, to southern India—Cox documents the surprising ways in which air-conditioning changes human experience: giving a boost to the global warming that it is designed to help us endure, providing a potent commercial stimulant, making possible an impossible commuter economy, and altering migration patterns (air-conditioning has helped alter the political hue of the United States by enabling a population boom in the red-state Sun Belt).&lt;br /&gt;&lt;br /&gt;While the book proves that the planet’s atmosphere cannot sustain even our current use of air-conditioning, it also makes a much more positive argument that loosening our attachment to refrigerated air could bring benefits to humans and the planet that go well beyond averting a climate crisis. Though it saves lives in heat waves, air-conditioning may also be altering our bodies’ sensitivity to heat; our rates of infection, allergy, asthma, and obesity; and even our sex drive. Air-conditioning has eroded social bonds and thwarted childhood adventure; it has transformed the ways we eat, sleep, travel, work, buy, relax, vote, and make both love and war. The final chapter surveys the many alternatives to conventional central air-conditioning. By reintroducing some traditional cooling methods, putting newly emerging technologies into practice, and getting beyond industrial definitions of comfort, we can make ourselves comfortable and keep the planet comfortable, too.</description>
+                <authors>
+                    <author>
+                        <id>1018897</id>
+                        <name>Stan Cox</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1272843933p5/1018897.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1272843933p2/1018897.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/1018897.Stan_Cox]]></link>
+                        <average_rating>3.54</average_rating>
+                        <ratings_count>80</ratings_count>
+                        <text_reviews_count>38</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2010</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Sun Jul 21 14:19:58 -0700 2013</date_added>
+            <date_updated>Sun Jul 21 14:19:58 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/673557345]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/673557345]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>667891964</id>
+            <book>
+                <id type="integer">304482</id>
+                <isbn>0471453803</isbn>
+                <isbn13>9780471453802</isbn13>
+                <text_reviews_count type="integer">32</text_reviews_count>
+                <title>Secrets and Lies: Digital Security in a Networked World</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/304482.Secrets_and_Lies</link>
+                <num_pages>401</num_pages>
+                <format>Paperback</format>
+                <edition_information>Second Edition</edition_information>
+                <publisher>John Wiley &amp; Sons</publisher>
+                <publication_day>30</publication_day>
+                <publication_year>2004</publication_year>
+                <publication_month>1</publication_month>
+                <average_rating>3.95</average_rating>
+                <ratings_count>580</ratings_count>
+                <description>Viruses. Identity Theft. Corporate Espionage. National secrets compromised. Can anyone promise security in our digital world?&lt;br /&gt;&lt;br /&gt;The man who introduced cryptography to the boardroom says no. But in this fascinating read, he shows us how to come closer by developing security measures in terms of context, tools, and strategy. Security is a process, not a product – one that system administrators and corporate executives alike must understand to survive.&lt;br /&gt;&lt;br /&gt;This edition updated with new information about post-9/11 security.</description>
+                <authors>
+                    <author>
+                        <id>175417</id>
+                        <name>Bruce Schneier</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332793096p5/175417.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332793096p2/175417.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/175417.Bruce_Schneier]]></link>
+                        <average_rating>3.95</average_rating>
+                        <ratings_count>2214</ratings_count>
+                        <text_reviews_count>204</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2004</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Sun Jul 14 19:46:20 -0700 2013</date_added>
+            <date_updated>Sun Jul 14 19:46:21 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/667891964]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/667891964]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>666963595</id>
+            <book>
+                <id type="integer">16043524</id>
+                <isbn>1610392116</isbn>
+                <isbn13>9781610392112</isbn13>
+                <text_reviews_count type="integer">11</text_reviews_count>
+                <title>Rise of the Warrior Cop: The Militarization of America's Police Forces</title>
+                <image_url>http://d202m5krfqbpi5.cloudfront.net/books/1365526873m/16043524.jpg</image_url>
+                <small_image_url>http://d202m5krfqbpi5.cloudfront.net/books/1365526873s/16043524.jpg</small_image_url>
+                <link>http://www.goodreads.com/book/show/16043524-rise-of-the-warrior-cop</link>
+                <num_pages>400</num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>PublicAffairs</publisher>
+                <publication_day>9</publication_day>
+                <publication_year>2013</publication_year>
+                <publication_month>7</publication_month>
+                <average_rating>4.46</average_rating>
+                <ratings_count>39</ratings_count>
+                <description>The last days of colonialism taught America’s revolutionaries that soldiers in the streets bring conflict and tyranny. As a result, our country has generally worked to keep the military out of law enforcement. But according to investigative reporter Radley Balko, over the last several decades, America’s cops have increasingly come to resemble ground troops. The consequences have been dire: the home is no longer a place of sanctuary, the Fourth Amendment has been gutted, and police today have been conditioned to see the citizens they serve as an other—an enemy.&lt;br /&gt;&lt;br /&gt;Today’s armored-up policemen are a far cry from the constables of early America. The unrest of the 1960s brought about the invention of the SWAT unit—which in turn led to the debut of military tactics in the ranks of police officers. Nixon’s War on Drugs, Reagan’s War on Poverty, Clinton’s COPS program, the post�9/11 security state under Bush and Obama: by degrees, each of these innovations expanded and empowered police forces, always at the expense of civil liberties. And these are just four among a slew of reckless programs.&lt;br /&gt;&lt;br /&gt;In &lt;em&gt;Rise of the Warrior Cop&lt;/em&gt;, Balko shows how politicians’ ill-considered policies and relentless declarations of war against vague enemies like crime, drugs, and terror have blurred the distinction between cop and soldier. His fascinating, frightening narrative shows how over a generation, a creeping battlefield mentality has isolated and alienated American police officers and put them on a collision course with the values of a free society.&lt;br /&gt;</description>
+                <authors>
+                    <author>
+                        <id>5278513</id>
+                        <name>Radley Balko</name>
+                        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/5278513.Radley_Balko]]></link>
+                        <average_rating>4.15</average_rating>
+                        <ratings_count>92</ratings_count>
+                        <text_reviews_count>29</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2013</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Sat Jul 13 17:53:30 -0700 2013</date_added>
+            <date_updated>Sat Jul 13 17:53:30 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/666963595]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/666963595]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>665288531</id>
+            <book>
+                <id type="integer">13177889</id>
+                <isbn>0807835285</isbn>
+                <isbn13>9780807835289</isbn13>
+                <text_reviews_count type="integer">3</text_reviews_count>
+                <title>Arc of Empire: America's Wars in Asia from the Philippines to Vietnam</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/13177889-arc-of-empire</link>
+                <num_pages>360</num_pages>
+                <format>Hardcover</format>
+                <edition_information/>
+                <publisher>University of North Carolina Press</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>2012</publication_year>
+                <publication_month>3</publication_month>
+                <average_rating>3.50</average_rating>
+                <ratings_count>8</ratings_count>
+                <description>Although conventionally treated as separate, America's four wars in Asia were actually phases in a sustained U.S. bid for regional dominance, according to Michael H. Hunt and Steven I. Levine. This effort unfolded as an imperial project in which military power and the imposition of America's political will were crucial. Devoting equal attention to Asian and American perspectives, the authors follow the long arc of conflict across seventy-five years from the Philippines through Japan and Korea to Vietnam, tracing along the way American ambition, ascendance, and ultimate defeat. They show how these wars are etched deeply in eastern Asia's politics and culture.&lt;br /&gt;The authors encourage readers to confront the imperial pattern in U.S. history with implications for today's Middle Eastern conflicts. They also offer a deeper understanding of China's rise and Asia's place in today's world. &lt;br /&gt;</description>
+                <authors>
+                    <author>
+                        <id>80902</id>
+                        <name>Michael H. Hunt</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1347565776p5/80902.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1347565776p2/80902.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/80902.Michael_H_Hunt]]></link>
+                        <average_rating>3.67</average_rating>
+                        <ratings_count>163</ratings_count>
+                        <text_reviews_count>20</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2012</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Thu Jul 11 17:10:11 -0700 2013</date_added>
+            <date_updated>Thu Jul 11 17:10:12 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/665288531]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/665288531]]></link>
+            <owned>0</owned>
+        </review>
+
+        <review>
+            <id>664309623</id>
+            <book>
+                <id type="integer">55198</id>
+                <isbn>0140296557</isbn>
+                <isbn13>9780140296556</isbn13>
+                <text_reviews_count type="integer">1</text_reviews_count>
+                <title>The Book of War: 25 Centuries of Great War Writing</title>
+                <image_url>http://www.goodreads.com/assets/nocover/111x148.png</image_url>
+                <small_image_url>http://www.goodreads.com/assets/nocover/60x80.png</small_image_url>
+                <link>http://www.goodreads.com/book/show/55198.The_Book_of_War</link>
+                <num_pages>512</num_pages>
+                <format>Paperback</format>
+                <edition_information/>
+                <publisher>Penguin Books</publisher>
+                <publication_day>1</publication_day>
+                <publication_year>2000</publication_year>
+                <publication_month>11</publication_month>
+                <average_rating>3.67</average_rating>
+                <ratings_count>73</ratings_count>
+                <description>&lt;strong&gt;Acclaimed military historian John Keegan’s anthology of war writing from 25 centuries of battle&lt;br /&gt;  &lt;br /&gt;&lt;/strong&gt;In The Book of War, John Keegan marshals a formidable host of war writings to chronicle the evolution of Western warfare through the voice of the most eloquent participants—from Thucydides’ classic account of ancient Greek phalanx warfare to a blow-by-blow description of ground fighting against the Iraqi troops in Kuwait during the Gulf War. Keegan gathers more than eighty selections, including Caesar’s Commentaries on the Roman invasion of Britain; the French Knight Jehan de Wavrin at the battle of Agincourt; Davy Crockett in the war against the Creek; Wellington’s dispatch on Waterloo; Hemingway after Caporetto; and Ernie Pyle at Normandy.&lt;br /&gt;&lt;br /&gt; “The best military historian of our generation.” –Tom Clancy&lt;br /&gt;  &lt;br /&gt; “A monumental piece of literary military history.” –Chicago Tribune&lt;br /&gt;&lt;br /&gt; A brilliantly edited and comprehensive anthology."—&lt;em&gt;The New York Times Book Review&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;</description>
+                <authors>
+                    <author>
+                        <id>4619485</id>
+                        <name>John Keegan</name>
+                        <image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332081125p5/4619485.jpg]]></image_url>
+                        <small_image_url><![CDATA[http://d202m5krfqbpi5.cloudfront.net/authors/1332081125p2/4619485.jpg]]></small_image_url>
+                        <link><![CDATA[http://www.goodreads.com/author/show/4619485.John_Keegan]]></link>
+                        <average_rating>3.97</average_rating>
+                        <ratings_count>17944</ratings_count>
+                        <text_reviews_count>986</text_reviews_count>
+                    </author>
+                </authors>
+                <published>2000</published>
+            </book>
+
+            <rating>0</rating>
+            <votes>0</votes>
+            <spoiler_flag>false</spoiler_flag>
+            <spoilers_state>none</spoilers_state>
+            <shelves>
+                <shelf name="to-read" />
+            </shelves>
+            <recommended_for></recommended_for>
+            <recommended_by></recommended_by>
+            <started_at></started_at>
+            <read_at></read_at>
+            <date_added>Wed Jul 10 15:47:08 -0700 2013</date_added>
+            <date_updated>Wed Jul 10 15:47:08 -0700 2013</date_updated>
+            <read_count></read_count>
+            <body>
+
+            </body>
+            <comments_count>review_comments_count</comments_count>
+            <url><![CDATA[http://www.goodreads.com/review/show/664309623]]></url>
+            <link><![CDATA[http://www.goodreads.com/review/show/664309623]]></link>
+            <owned>0</owned>
+        </review>
+
+    </reviews>
+
+</GoodreadsResponse>

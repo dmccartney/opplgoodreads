@@ -15,7 +15,7 @@
     <option name="CLEAR_LOGCAT" value="false" />
     <RunnerSettings RunnerId="AndroidDebugRunner" />
     <RunnerSettings RunnerId="Profile ">
-      <option name="myExternalizedOptions" />
+      <option name="myExternalizedOptions" value="&#10;additional-options2=onexit\=snapshot&#10;" />
     </RunnerSettings>
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="AndroidDebugRunner" />

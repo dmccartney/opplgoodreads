@@ -1,0 +1,28 @@
+
+
+when to use fragments?
+when should fragments be grouped into a single activity? why make > 1 activity?
+
+what's sherlock? a sherlock activity?
+
+fragmentManager.popStateBack?
+
+mDHubApp = (DeliveryHubApplication) activity.getApplication();
+
+
+ViewPager
+  - what are the ways that an activity/layout can contain fragments?
+
+supporting
+ - navigation header bar
+ - pull-from-the-left extra menus
+
+*************************************************************
+******* These are things that would be nice *****************
+*************************************************************
+
+pull to refresh on your list
+
+
+
+

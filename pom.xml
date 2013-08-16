@@ -21,8 +21,60 @@
   </properties>
 
   <dependencies>
+      <!--app specific-->
 
-    <!--main-->
+      <dependency>
+          <groupId>oauth.signpost</groupId>
+          <artifactId>oauth-signpost</artifactId>
+          <version>1.2.1.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>oauth.signpost</groupId>
+          <artifactId>signpost-commonshttp4</artifactId>
+          <version>1.2.1.2</version>
+      </dependency>
+
+
+
+      <dependency>
+          <groupId>org.simpleframework</groupId>
+          <artifactId>simple-xml</artifactId>
+          <version>2.7.1</version>
+          <exclusions>
+              <!-- StAX is not available on Android -->
+              <exclusion>
+                  <artifactId>stax</artifactId>
+                  <groupId>stax</groupId>
+              </exclusion>
+              <exclusion>
+                  <artifactId>stax-api</artifactId>
+                  <groupId>stax</groupId>
+              </exclusion>
+              <!-- Provided by Android -->
+              <exclusion>
+                  <artifactId>xpp3</artifactId>
+                  <groupId>xpp3</groupId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.4</version>
+      </dependency>
+
+<!--needed?-->
+      <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>2.2.4</version>
+      </dependency>
+
+
+
+      <!--main-->
     <dependency>
       <groupId>org.roboguice</groupId>
       <artifactId>roboguice</artifactId>

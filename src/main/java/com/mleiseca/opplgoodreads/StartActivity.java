@@ -1,14 +1,30 @@
 package com.mleiseca.opplgoodreads;
 
 import android.accounts.*;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.mleiseca.opplgoodreads.util.CurrentTime;
+import com.mleiseca.opplgoodreads.xml.objects.AuthUser;
+
 import com.google.inject.Inject;
+
+import oauth.signpost.exception.OAuthCommunicationException;
+import oauth.signpost.exception.OAuthExpectationFailedException;
+import oauth.signpost.exception.OAuthMessageSignerException;
+import oauth.signpost.exception.OAuthNotAuthorizedException;
+
+import org.apache.commons.lang.StringUtils;
+
 import roboguice.activity.RoboActivity;
 import roboguice.inject.InjectView;
 
@@ -19,14 +35,58 @@ public class StartActivity extends RoboActivity {
 //
 //    @InjectView(R.id.current_time)
 //    TextView currentTimeText;
+    public static final String TAG = StartActivity.class.getSimpleName();
 
     @Inject
     private CurrentTime currentTime;
+
+    private Dialog mProgressBar;
+
+    private GoodreadsAPI mGoodreadsApi;
+
+    @InjectView(R.id.home_helpful_text)
+    private TextView mHelpfulText;
+
+//
+//    @Override
+//    public void onDismiss(DialogInterface dialogInterface) {
+//        this.cancel(false);
+//    }
+//
+//    @Override
+//    public void onCancel(DialogInterface dialogInterface) {
+//        this.cancel(false);
+//    }
+//
+//    private void addDialog() {
+//        if (context != null && showDialog) {
+//            dialog = ProgressDialogBuilder.makeDialog(context);
+//
+//            //intentionally hard-coded to be non-cancelable
+//            dialog.setCancelable(false);
+//
+//            dialog.setOnDismissListener(this);
+//            dialog.setOnCancelListener(this);
+//            dialog.show();
+//        }
+//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+
+        showProgressBar(false);
+
+        final String oauthDeveloperKey = getString(R.string.oauth_developer_key);
+        final String oauthDeveloperSecret = getString(R.string.oauth_developer_secret);
+        final String oauthCallbackUrl = getString(R.string.oauth_callback_url);
+
+        //todo: is there a nice way to inject this?
+        mGoodreadsApi = new GoodreadsAPI(this, new MyApiEventListener());
+        mGoodreadsApi.setOAuthInfo(oauthDeveloperKey, oauthDeveloperSecret, oauthCallbackUrl);
+
+
 //        title.setText("Hello World");
 //        currentTimeText.setText(String.valueOf(currentTime.currentTimeMillis()));
 
@@ -50,8 +110,38 @@ public class StartActivity extends RoboActivity {
 //                }));    // Callback called if an error occurs
     }
 
+    @Override protected void onStart() {
+        super.onStart();    //To change body of overridden methods use File | Settings | File Templates.
+        Uri data = getIntent().getData();
+        if(data != null){
+            mGoodreadsApi.loadTokens();
+            mGoodreadsApi.retrieveAccessToken(data.toString());
+        }
+
+
+        if(mGoodreadsApi.isLoggedIn()){
+            mHelpfulText.setText("You are logged in!");
+        }else{
+            mHelpfulText.setText("You are NOT logged in!");
+        }
+//        getIntent().getStringExtra()
+    }
+
     public void onLoginClick(View view){
+
+        if (mGoodreadsApi.isLoggedIn()) {
+            Log.d(TAG, "isLoggedIn");
+            start();
+        } else {
+            Log.d(TAG, "!isLoggedIn - calling login()");
+            handleLogin();
+        }
+
         Log.d("StartActivity", "got login click");
+    }
+
+    public void onViewShelfClick(View view){
+        Log.d("StartActivity", "got view shelf click");
     }
 
     public CurrentTime getCurrentTime() {
@@ -59,24 +149,96 @@ public class StartActivity extends RoboActivity {
     }
 
 
+    class MyApiEventListener implements GoodreadsAPI.ApiEventListener {
 
-    private class OnTokenAcquired implements AccountManagerCallback<Bundle> {
         @Override
-        public void run(AccountManagerFuture<Bundle> result) {
-            // Get the result of the operation from the AccountManagerFuture.
-            try {
-                Bundle bundle = result.getResult();
+        public void OnNeedsCredentials() {
+            handleLogin();
+        }
 
+    }
 
-            //todo:
-            // The token is a named value in the bundle. The name of the value
-            // is stored in the constant AccountManager.KEY_AUTHTOKEN.
-//            token = bundle.getString(AccountManager.KEY_AUTHTOKEN);
-                Log.d("StartActivity","Got token: " + bundle.getString(AccountManager.KEY_AUTHTOKEN));
-            } catch (Exception e) {
-//                title.setText("Authentication error: " + e);
-            }
+    public void handleLogin() {
 
+//        showProgressBar(true);
+//
+//        mGoodreadsApi.login(new GoodreadsAPI.OAuthLoginCallback() {
+//
+//            @Override
+//            public void onSuccess() {
+//                Log.e(TAG, "successful login!");
+//                start();
+//                showProgressBar(false);
+//            }
+//
+//            @Override
+//            public void onError(Throwable tr) {
+//                Log.e(TAG, "onError", tr);
+//                showProgressBar(false);
+//            }
+//        });
+
+        try {
+            String requestToken = mGoodreadsApi.retrieveRequestToken();
+
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(requestToken));
+            startActivity(i);
+
+        } catch (Exception e) {
+            Log.e(TAG, "Problem getting requestToken", e);
         }
     }
+
+    private void showProgressBar(boolean show) {
+//        if(mProgressBar == null && show ){
+//            mProgressBar= ProgressDialogBuilder.makeDialog(this);
+//
+//            //intentionally hard-coded to be non-cancelable
+//            mProgressBar.setCancelable(false);
+//
+////            mProgressBar.setOnDismissListener(this);
+////            mProgressBar.setOnCancelListener(this);
+//            mProgressBar.show();
+//        }
+//
+//        if (mProgressBar != null) {
+//            if(show){
+//                mProgressBar.show();
+//            }else{
+//                mProgressBar.dismiss();
+//            }
+//        }
+    }
+
+    private void start() {
+        new FetchUserInfoTask().execute();
+    }
+
+
+    private class FetchUserInfoTask extends AsyncTask<Void, Void, AuthUser> {
+
+        @Override
+        protected void onPreExecute() {
+            showProgressBar(true);
+        }
+
+        @Override
+        protected AuthUser doInBackground(Void... params) {
+            return mGoodreadsApi.getAuthUserInfo();
+        }
+
+        @Override
+        protected void onPostExecute(AuthUser authUser) {
+
+            if (authUser != null) {
+                Log.i(TAG, "User Name: " + authUser.getName());
+            }
+        }
+
+    }
+
+
+
+
 }
