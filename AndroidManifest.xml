@@ -38,5 +38,11 @@
 
       </intent-filter>
     </activity>
+
+      <activity
+          android:name=".DisplayShelfActivity"
+          android:label="display shelf"
+          android:parentActivityName=".StartActivity" >
+      </activity>
   </application>
 </manifest> 

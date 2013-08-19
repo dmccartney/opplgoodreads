@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <TextView android:id="@+id/txtShelfItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:text="shelf"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    insert into hours_override (cust_id, customer_local_start_time, customer_local_end_time, hours_override_type_id)
+    select cust_id, '2013-08-18 15:00', '2013-08-19 10:00', 1
+    from customer
+    where delivery_service_id in (1)
+    and city_id = 3;
+
+    <TextView android:id="@+id/txtShelfItemAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:text="by some guy"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+</LinearLayout>

@@ -12,8 +12,10 @@ import android.util.Log;
 
 import com.mleiseca.opplgoodreads.xml.objects.AuthUser;
 import com.mleiseca.opplgoodreads.xml.objects.Author;
+import com.mleiseca.opplgoodreads.xml.objects.Review;
 import com.mleiseca.opplgoodreads.xml.responses.AuthUserResponse;
 import com.mleiseca.opplgoodreads.xml.responses.AuthorResponse;
+import com.mleiseca.opplgoodreads.xml.responses.ReviewsListResponse;
 
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthProvider;
@@ -41,6 +43,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.ResourceBundle;
 
 /**
  * Created with IntelliJ IDEA. User: mleiseca Date: 8/14/13 Time: 11:49 PM To change this template use File | Settings | File Templates.
@@ -101,9 +104,16 @@ public class GoodreadsAPI {
 //                                                                                  : OAuthLoginDialogType.FULLSCREEN;
 
         mOAuthLoginDialogType = OAuthLoginDialogType.DIALOG;
+
+
+        final String oauthDeveloperKey = activity.getString(R.string.oauth_developer_key);
+        final String oauthDeveloperSecret = activity.getString(R.string.oauth_developer_secret);
+        final String oauthCallbackUrl = activity.getString(R.string.oauth_callback_url);
+
+        setOAuthInfo(oauthDeveloperKey, oauthDeveloperSecret, oauthCallbackUrl);
     }
 
-    public void setOAuthInfo(String oAuthDeveloperKey, String oAuthDeveloperSecret, String oAuthCallbackUrl) {
+    private void setOAuthInfo(String oAuthDeveloperKey, String oAuthDeveloperSecret, String oAuthCallbackUrl) {
         mOAuthDeveloperKey = oAuthDeveloperKey;
         mOAuthDeveloperSecret = oAuthDeveloperSecret;
         mOAuthCallbackUrl = oAuthCallbackUrl;
@@ -185,6 +195,7 @@ public class GoodreadsAPI {
 
         HttpGet get = new HttpGet(url.toString());
 
+        //this should only happen...? when?
         mConsumer.sign(get);
         HttpClient httpClient = new DefaultHttpClient();
         HttpResponse response = httpClient.execute(get);
@@ -374,6 +385,30 @@ public class GoodreadsAPI {
 
     private SharedPreferences getSharedPrefs() {
         return mActivity.getSharedPreferences(SHARED_PREF_FILENAME, Activity.MODE_PRIVATE);
+    }
+
+    public List<Review> retrieveBooksOnShelf(String shelfName){
+        List<Review> ret = null;
+
+        try {
+            Map<String, String> params = new HashMap<String, String>();
+            String id = getAuthUserInfo().getId();
+            params.put("id", id);
+            params.put("v", "2");
+            String output = request("review/list/" +id + ".xml" , params);
+
+            Serializer serializer = new Persister();
+
+            ReviewsListResponse response = serializer.read(ReviewsListResponse.class, output);
+            if (response != null) {
+                ret = response.getReviews();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Exception", e);
+        }
+
+        return ret;
+
     }
 
     /**

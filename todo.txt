@@ -1,4 +1,10 @@
 
+save current user's id (so that we don't have to query when fetching shelf data)
+
+
+OAuth oauth_consumer_key="7yDxHo2vx9QNZWrFOM9oA", oauth_nonce="3211379562159061448", oauth_signature="rAOut9Z2ngdDvvwKx4r6etnd9ek%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1376722510", oauth_token="90PXyHHfXk5JSfmuUsnIyQ", oauth_version="1.0"
+
+Authorization: OAuth oauth_consumer_key="7yDxHo2vx9QNZWrFOM9oA", oauth_nonce="1404263217744315837", oauth_signature="mfEPy97OR6gIYGxebCgqsCbo%2F38%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1376722589", oauth_token="90PXyHHfXk5JSfmuUsnIyQ", oauth_version="1.0"
 
 when to use fragments?
 when should fragments be grouped into a single activity? why make > 1 activity?
@@ -9,6 +15,7 @@ fragmentManager.popStateBack?
 
 mDHubApp = (DeliveryHubApplication) activity.getApplication();
 
+does the shelf service response only return 20 books? what if none are available?
 
 ViewPager
   - what are the ways that an activity/layout can contain fragments?

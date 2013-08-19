@@ -78,13 +78,8 @@ public class StartActivity extends RoboActivity {
 
         showProgressBar(false);
 
-        final String oauthDeveloperKey = getString(R.string.oauth_developer_key);
-        final String oauthDeveloperSecret = getString(R.string.oauth_developer_secret);
-        final String oauthCallbackUrl = getString(R.string.oauth_callback_url);
-
         //todo: is there a nice way to inject this?
         mGoodreadsApi = new GoodreadsAPI(this, new MyApiEventListener());
-        mGoodreadsApi.setOAuthInfo(oauthDeveloperKey, oauthDeveloperSecret, oauthCallbackUrl);
 
 
 //        title.setText("Hello World");
@@ -142,6 +137,8 @@ public class StartActivity extends RoboActivity {
 
     public void onViewShelfClick(View view){
         Log.d("StartActivity", "got view shelf click");
+        Intent i = new Intent(this, DisplayShelfActivity.class);
+        startActivity(i);
     }
 
     public CurrentTime getCurrentTime() {

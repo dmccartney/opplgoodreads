@@ -257,5 +257,11 @@
         </configuration>
       </plugin>
     </plugins>
+
+      <testResources>
+          <testResource>
+              <directory>resources</directory>
+          </testResource>
+      </testResources>
   </build>
 </project>
