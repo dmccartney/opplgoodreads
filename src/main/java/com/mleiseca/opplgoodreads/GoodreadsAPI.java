@@ -1,20 +1,17 @@
 package com.mleiseca.opplgoodreads;
 
+import com.google.inject.Inject;
+
 import android.app.Activity;
-import android.app.FragmentTransaction;
-import android.content.Intent;
+import android.content.Context;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.mleiseca.opplgoodreads.xml.objects.AuthUser;
-import com.mleiseca.opplgoodreads.xml.objects.Author;
 import com.mleiseca.opplgoodreads.xml.objects.Review;
 import com.mleiseca.opplgoodreads.xml.responses.AuthUserResponse;
-import com.mleiseca.opplgoodreads.xml.responses.AuthorResponse;
 import com.mleiseca.opplgoodreads.xml.responses.ReviewsListResponse;
 
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
@@ -43,7 +40,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 /**
  * Created with IntelliJ IDEA. User: mleiseca Date: 8/14/13 Time: 11:49 PM To change this template use File | Settings | File Templates.
@@ -66,66 +62,41 @@ public class GoodreadsAPI {
 
     public static final String TAG = GoodreadsAPI.class.getSimpleName();
 
-    private Activity mActivity;
+    private Context mContext;
+    HttpClient httpClient ;
+
     private CommonsHttpOAuthConsumer mConsumer;
     private CommonsHttpOAuthProvider mProvider;
-    private String mToken;
-    private String mTokenSecret;
     private String mOAuthDeveloperKey;
-    private String mOAuthDeveloperSecret;
     private String mOAuthCallbackUrl;
-    private OAuthLoginDialogType mOAuthLoginDialogType;
 
     private boolean mIsLoggedIn;
 
-    private ApiEventListener mListener;
-
-    public static enum OAuthLoginDialogType {
-        FULLSCREEN, DIALOG
-    }
-
-    public interface OAuthLoginCallback {
-        void onSuccess();
-
-        void onError(Throwable tr);
-    }
-
-    public interface ApiEventListener {
-
-        void OnNeedsCredentials();
-    }
-
-    public GoodreadsAPI(Activity activity, ApiEventListener listener) {
-        mActivity = activity;
-        mListener = listener;
-
-        // Set a default, can be changed by user
-//        mOAuthLoginDialogType = UIUtils.isSmallestWidthGreaterThan600dp(activity) ? OAuthLoginDialogType.DIALOG
-//                                                                                  : OAuthLoginDialogType.FULLSCREEN;
-
-        mOAuthLoginDialogType = OAuthLoginDialogType.DIALOG;
+    @Inject
+    public GoodreadsAPI(Context context) {
+        this.httpClient = new DefaultHttpClient();
+        this.mContext = context;
 
 
-        final String oauthDeveloperKey = activity.getString(R.string.oauth_developer_key);
-        final String oauthDeveloperSecret = activity.getString(R.string.oauth_developer_secret);
-        final String oauthCallbackUrl = activity.getString(R.string.oauth_callback_url);
+        final String oauthDeveloperKey = mContext.getString(R.string.oauth_developer_key);
+        final String oauthDeveloperSecret = mContext.getString(R.string.oauth_developer_secret);
+        final String oauthCallbackUrl = mContext.getString(R.string.oauth_callback_url);
 
         setOAuthInfo(oauthDeveloperKey, oauthDeveloperSecret, oauthCallbackUrl);
     }
 
     private void setOAuthInfo(String oAuthDeveloperKey, String oAuthDeveloperSecret, String oAuthCallbackUrl) {
         mOAuthDeveloperKey = oAuthDeveloperKey;
-        mOAuthDeveloperSecret = oAuthDeveloperSecret;
         mOAuthCallbackUrl = oAuthCallbackUrl;
 
-        if (TextUtils.isEmpty(mOAuthDeveloperSecret) || TextUtils.isEmpty(mOAuthDeveloperSecret)
-            || TextUtils.isEmpty(mOAuthCallbackUrl)) {
+        if (TextUtils.isEmpty(oAuthDeveloperSecret) || TextUtils.isEmpty(oAuthDeveloperSecret)
+            || TextUtils.isEmpty(oAuthCallbackUrl)) {
             String exception = "None may be empty: oAuthDeveloperKey, oAuthDeveloperSecret, oAuthCallbackUrl.";
             Log.e(TAG, exception);
             throw new RuntimeException(exception);
         }
 
-        mConsumer = new CommonsHttpOAuthConsumer(mOAuthDeveloperKey, mOAuthDeveloperSecret);
+        mConsumer = new CommonsHttpOAuthConsumer(mOAuthDeveloperKey, oAuthDeveloperSecret);
         mProvider = new CommonsHttpOAuthProvider(REQUEST_TOKEN_ENDPOINT_URL,
                                                  ACCESS_TOKEN_ENPOINT_URL,
                                                  AUTHORIZATION_WEBSITE_URL);
@@ -150,14 +121,6 @@ public class GoodreadsAPI {
         } else {
             mIsLoggedIn = false;
         }
-    }
-
-    public void setOAuthLoginDialogType(OAuthLoginDialogType oAuthLoginDialogType) {
-        mOAuthLoginDialogType = oAuthLoginDialogType;
-    }
-
-    public void login(OAuthLoginCallback callback) {
-        new RetrieveRequestTokenTask(callback).execute();
     }
 
     private String request(String service) throws Exception {
@@ -197,7 +160,6 @@ public class GoodreadsAPI {
 
         //this should only happen...? when?
         mConsumer.sign(get);
-        HttpClient httpClient = new DefaultHttpClient();
         HttpResponse response = httpClient.execute(get);
         InputStream is = response.getEntity().getContent();
         output = IOUtils.toString(is, "UTF-8");
@@ -208,10 +170,6 @@ public class GoodreadsAPI {
 
         if (statusCode == 401) {
             clearAuthInformation();
-
-            if (mListener != null) {
-                mListener.OnNeedsCredentials();
-            }
         }
 
         // TODO Debug, REMOVEME
@@ -222,53 +180,6 @@ public class GoodreadsAPI {
         return output;
     }
 
-    private class RetrieveRequestTokenTask extends AsyncTask<Void, Void, String> {
-
-        private OAuthLoginCallback mCallback;
-
-        public RetrieveRequestTokenTask(OAuthLoginCallback callback) {
-            mCallback = callback;
-        }
-
-        @Override
-        protected String doInBackground(Void... params) {
-            String authorizeUrl = null;
-            try {
-                authorizeUrl = retrieveRequestToken();
-            } catch (Exception e) {
-                Log.e(TAG, "Exception while retrieving request token.", e);
-                if (mCallback != null) {
-                    mCallback.onError(e);
-                }
-            }
-            return authorizeUrl;
-        }
-
-        @Override
-        protected void onPostExecute(String authorizeUrl) {
-            if (authorizeUrl != null) {
-                OAuthDialogFragment f = OAuthDialogFragment.newInstance(authorizeUrl, mOAuthCallbackUrl,
-                                                                        new OAuthDialogFragment.AuthorizeListener() {
-
-                                                                            @Override
-                                                                            public void onAuthorized(String verifier) {
-                                                                                new RetrieveAccessTokenTask(mCallback).execute(verifier);
-                                                                            }
-                                                                        });
-
-                if (mOAuthLoginDialogType == OAuthLoginDialogType.FULLSCREEN) {
-                    FragmentTransaction ft = mActivity.getFragmentManager().beginTransaction();
-                    ft.add(android.R.id.content, f);
-                    ft.commit();
-                } else {
-                    f.show(mActivity.getFragmentManager(), OAuthDialogFragment.TAG);
-                }
-
-                saveRequestInformation(mConsumer.getToken(), mConsumer.getTokenSecret());
-            }
-        }
-    }
-
     public String retrieveRequestToken()
         throws OAuthMessageSignerException, OAuthNotAuthorizedException, OAuthExpectationFailedException, OAuthCommunicationException {
         String s = mProvider.retrieveRequestToken(mConsumer, mOAuthCallbackUrl);
@@ -277,58 +188,14 @@ public class GoodreadsAPI {
         return s;
     }
 
-    private class RetrieveAccessTokenTask extends AsyncTask<String, Void, Boolean> {
-
-        private OAuthLoginCallback mCallback;
-
-        public RetrieveAccessTokenTask(OAuthLoginCallback callback) {
-            mCallback = callback;
-        }
-
-        @Override
-        protected Boolean doInBackground(String... params) {
-            boolean success = false;
-            try {
-                retrieveAccessToken(params[0]);
-                success = true;
-            } catch (Exception e) {
-                Log.e(TAG, "Exception while retrieving access token.", e);
-                if (mCallback != null) {
-                    mCallback.onError(e);
-                }
-                success = false;
-            }
-
-            return success;
-        }
-
-        @Override
-        protected void onPostExecute(Boolean success) {
-            mIsLoggedIn = success;
-
-            if (success) {
-                mToken = mConsumer.getToken();
-                mTokenSecret = mConsumer.getTokenSecret();
-                mConsumer.setTokenWithSecret(mToken, mTokenSecret);
-
-                saveAuthInformation(mToken, mTokenSecret);
-                clearRequestInformation();
-
-                if (mCallback != null) {
-                    mCallback.onSuccess();
-                }
-            }
-        }
-    }
-
     public void retrieveAccessToken(String param)  {
         try {
             mProvider.retrieveAccessToken(mConsumer, param);
-            mToken = mConsumer.getToken();
-            mTokenSecret = mConsumer.getTokenSecret();
-            mConsumer.setTokenWithSecret(mToken, mTokenSecret);
+            String token = mConsumer.getToken();
+            String tokenSecret = mConsumer.getTokenSecret();
+            mConsumer.setTokenWithSecret(token, tokenSecret);
 
-            saveAuthInformation(mToken, mTokenSecret);
+            saveAuthInformation(token, tokenSecret);
             clearRequestInformation();
 
         } catch (Exception e) {
@@ -384,7 +251,7 @@ public class GoodreadsAPI {
     }
 
     private SharedPreferences getSharedPrefs() {
-        return mActivity.getSharedPreferences(SHARED_PREF_FILENAME, Activity.MODE_PRIVATE);
+        return mContext.getSharedPreferences(SHARED_PREF_FILENAME, Activity.MODE_PRIVATE);
     }
 
     public List<Review> retrieveBooksOnShelf(String shelfName){
@@ -428,77 +295,6 @@ public class GoodreadsAPI {
             if (response != null) {
                 ret = response.getAuthUser();
             }
-        } catch (Exception e) {
-            Log.e(TAG, "Exception", e);
-        }
-
-        return ret;
-    }
-
-    /**
-     * Get a paginated list of an authors books.
-     *
-     * @return
-     */
-    public AuthorResponse getAuthorBooks(int authorId) {
-        return getAuthorBooks(authorId, 0);
-    }
-
-    /**
-     * Get a paginated list of an authors books.
-     *
-     * @return
-     */
-    public AuthorResponse getAuthorBooks(int authorId, int page) {
-        AuthorResponse ret = null;
-
-        try {
-            Map<String, String> params = new HashMap<String, String>(1);
-            params.put("page", Integer.toString(page));
-
-            String output = request("author/list/" + authorId + ".xml", params);
-
-            Serializer serializer = new Persister();
-
-            ret = serializer.read(AuthorResponse.class, output);
-        } catch (Exception e) {
-            Log.e(TAG, "Exception", e);
-        }
-
-        return ret;
-    }
-
-    public Author getAuthorInfo(int authorId) {
-        Author ret = null;
-
-        try {
-            String output = request("author/show/" + authorId + ".xml");
-
-            Serializer serializer = new Persister();
-
-            AuthorResponse response = serializer.read(AuthorResponse.class, output);
-            if (response != null) {
-                ret = response.getAuthor();
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "Exception", e);
-        }
-
-        return ret;
-    }
-
-    /**
-     * Returns the Goodreads ID of a given book identified by it's ISBN.
-     *
-     * @param isbn
-     *          The book identified by an ISBN
-     * @return The Goodreads ID of the book
-     */
-    public String getIsbnToId(String isbn) {
-        String ret = null;
-
-        try {
-            ret = request("book/isbn_to_id/" + isbn);
         } catch (Exception e) {
             Log.e(TAG, "Exception", e);
         }
