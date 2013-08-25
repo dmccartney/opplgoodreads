@@ -2,28 +2,42 @@ package com.mleiseca.opplgoodreads;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.mleiseca.opplgoodreads.libraries.LibraryQuery;
+import com.mleiseca.opplgoodreads.libraries.LibraryQueryResult;
+import com.mleiseca.opplgoodreads.libraries.chicagoswan.ChicagoSwanClient;
 import com.mleiseca.opplgoodreads.xml.objects.Review;
+
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * Created with IntelliJ IDEA. User: mleiseca Date: 8/18/13 Time: 7:29 AM To change this template use File | Settings | File Templates.
  */
 public class ReviewAdapter extends ArrayAdapter<Review> {
 
+    private static final String TAG = ReviewAdapter.class.getSimpleName();
     Context context;
     int layoutResourceId;
     Review[] data;
+    ChicagoSwanClient client;
+    ExecutorService executorService;
 
     public ReviewAdapter(Context context, int layoutResourceId, Review[] data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.data = data;
+        this.client = new ChicagoSwanClient();
+        executorService = Executors.newFixedThreadPool(5);
     }
 
     @Override public View getView(int position, View convertView, ViewGroup parent) {
@@ -38,7 +52,10 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
             holder = new RewiewHolder();
             holder.txtTitle = (TextView)row.findViewById(R.id.txtShelfItemTitle);
             holder.txtAuthor= (TextView)row.findViewById(R.id.txtShelfItemAuthor);
-
+            holder.txtStatus= (TextView)row.findViewById(R.id.txtShelfItemStatus);
+            if(holder.libraryStatusFuture != null){
+                holder.libraryStatusFuture.cancel(true);
+            }
             row.setTag(holder);
         }
         else
@@ -47,16 +64,52 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         }
 
         Review review = data[position];
-        holder.txtTitle.setText(review.getBook().getTitle());
-        holder.txtAuthor.setText("author");
+        final RewiewHolder finalHolder = holder;
+        final String title = review.getBook().getTitle();
+        final String authorName = extractAuthorName(review);
+        holder.txtTitle.setText(title);
+        holder.txtAuthor.setText(authorName);
+        holder.txtStatus.setText("loading");
+        holder.libraryStatusFuture = executorService.submit(new Runnable() {
+            @Override public void run() {
+                try {
+                    final List<LibraryQueryResult> results = client.performQuery(new LibraryQuery(authorName, title, ""));
+                    Log.d(TAG, "Got response from client...with number of parsed results:" + results.size());
+                    finalHolder.txtStatus.post(new Runnable(){
+                        @Override public void run() {
+                            finalHolder.txtStatus.setText("Found some results! " + results.size());
+                        }
+                    });
+                } catch (Exception e) {
+                    finalHolder.txtStatus.post(new Runnable(){
+                        @Override public void run() {
+                            finalHolder.txtStatus.setText("ERROR");
+                        }
+                    });
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        });
 
         return row;
 
 
     }
 
+    private String extractAuthorName(Review review) {
+        if(review.getBook().getAuthors().isEmpty()){
+            return "";
+        }else{
+//            review.getBook().getAuthors().get(0).g
+            //todo: ugh
+            return "";
+        }
+    }
+
     private static class RewiewHolder {
         TextView txtTitle;
         TextView txtAuthor;
+        TextView txtStatus;
+        Future libraryStatusFuture;
     }
 }

@@ -14,7 +14,7 @@ import static com.google.common.collect.Lists.newArrayList;
 /**
  * Created with IntelliJ IDEA. User: mleiseca Date: 8/23/13 Time: 11:39 PM To change this template use File | Settings | File Templates.
  */
-public class SwanBookQueryParser {
+class SwanBookQueryParser {
 
     public List<LibraryQueryResult> parse(String content){
 //        b = doc.css('table.browseBibTable')
@@ -49,7 +49,6 @@ public class SwanBookQueryParser {
 //        end
 //            end
 
-        System.out.println("loading");
         List<LibraryQueryResult> statuses = newArrayList();
         Document doc = Jsoup.parse(content);
         Elements elements = doc.select(".browseResult");

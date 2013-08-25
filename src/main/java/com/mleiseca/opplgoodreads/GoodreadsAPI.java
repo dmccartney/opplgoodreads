@@ -172,11 +172,6 @@ public class GoodreadsAPI {
             clearAuthInformation();
         }
 
-        // TODO Debug, REMOVEME
-        FileUtils.writeStringToFile(
-            new File(Environment.getExternalStorageDirectory().getPath() + "/" + service.replace('/', '_')), output,
-            "UTF-8");
-
         return output;
     }
 
@@ -262,6 +257,10 @@ public class GoodreadsAPI {
             String id = getAuthUserInfo().getId();
             params.put("id", id);
             params.put("v", "2");
+            params.put("per_page", "50");
+            if(shelfName != null){
+                params.put("shelf",shelfName);
+            }
             String output = request("review/list/" +id + ".xml" , params);
 
             Serializer serializer = new Persister();

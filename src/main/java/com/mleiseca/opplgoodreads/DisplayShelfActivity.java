@@ -27,6 +27,7 @@ public class DisplayShelfActivity extends RoboListActivity {
         getListView().addHeaderView(header);
 
         List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("to-read");
+//        List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("currently-reading");
         final ListAdapter adapter = new ReviewAdapter(this,R.layout.shelf_item_row, reviews.toArray(new Review[reviews.size()]));
         getListView().setAdapter(adapter);
 
