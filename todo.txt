@@ -1,3 +1,7 @@
+cache lookups for book data
+display author info
+display loading screen
+
 
 save current user's id (so that we don't have to query when fetching shelf data)
 

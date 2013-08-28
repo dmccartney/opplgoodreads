@@ -2,6 +2,9 @@ package com.mleiseca.opplgoodreads;
 
 import com.google.inject.Inject;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListAdapter;
@@ -20,17 +23,55 @@ public class DisplayShelfActivity extends RoboListActivity {
     @Inject
     GoodreadsAPI mGoodreadsAPI;
 
+    ProgressDialog pd;
+    private Context context;
+
+
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
 
         View header = (View)getLayoutInflater().inflate(R.layout.shelf_header_row, null);
         getListView().addHeaderView(header);
 
-        List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("to-read");
-//        List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("currently-reading");
-        final ListAdapter adapter = new ReviewAdapter(this,R.layout.shelf_item_row, reviews.toArray(new Review[reviews.size()]));
-        getListView().setAdapter(adapter);
+        context = this;
 
+        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
 
+            @Override
+            protected void onPreExecute() {
+                pd = new ProgressDialog(context);
+                pd.setTitle("Loading...");
+                pd.setMessage("Please wait.");
+                pd.setCancelable(false);
+                pd.setIndeterminate(true);
+                pd.show();
+            }
+
+            @Override
+            protected Void doInBackground(Void... arg0) {
+                final List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("to-read");
+                //        List<Review> reviews = mGoodreadsAPI.retrieveBooksOnShelf("currently-reading");
+                pd.dismiss();
+                pd = null;
+
+                getListView().post(new Runnable() {
+                    @Override public void run() {
+                        final ListAdapter adapter = new ReviewAdapter(context,R.layout.shelf_item_row, reviews.toArray(new Review[reviews.size()]));
+                        getListView().setAdapter(adapter);
+                    }
+                });
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void result) {
+                if (pd!=null) {
+                    pd.dismiss();
+                }
+            }
+
+        };
+        task.execute((Void[])null);
     }
 }
