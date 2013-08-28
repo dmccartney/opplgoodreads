@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created with IntelliJ IDEA. User: mleiseca Date: 8/18/13 Time: 7:29 AM To change this template use File | Settings | File Templates.
@@ -53,33 +54,44 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
             holder.txtTitle = (TextView)row.findViewById(R.id.txtShelfItemTitle);
             holder.txtAuthor= (TextView)row.findViewById(R.id.txtShelfItemAuthor);
             holder.txtStatus= (TextView)row.findViewById(R.id.txtShelfItemStatus);
-            if(holder.libraryStatusFuture != null){
-                holder.libraryStatusFuture.cancel(true);
-            }
             row.setTag(holder);
         }
         else
         {
             holder = (RewiewHolder)row.getTag();
+            if(holder.libraryStatusFuture != null){
+                holder.libraryStatusFuture.cancel(true);
+            }
+
+            if(holder.cancelledFlag != null){
+                holder.cancelledFlag.set(true);
+            }
+
         }
 
         Review review = data[position];
         final RewiewHolder finalHolder = holder;
         final String title = review.getBook().getTitle();
         final String authorName = extractAuthorName(review);
+        final AtomicBoolean cancelledFlag = new AtomicBoolean(false);
         holder.txtTitle.setText(title);
         holder.txtAuthor.setText(authorName);
-        holder.txtStatus.setText("loading");
+        holder.txtStatus.setText("L");
+        holder.cancelledFlag = cancelledFlag;
         holder.libraryStatusFuture = executorService.submit(new Runnable() {
             @Override public void run() {
                 try {
                     final List<LibraryQueryResult> results = client.performQuery(new LibraryQuery(authorName, title, ""));
-                    Log.d(TAG, "Got response from client...with number of parsed results:" + results.size());
-                    finalHolder.txtStatus.post(new Runnable(){
-                        @Override public void run() {
-                            finalHolder.txtStatus.setText("Found some results! " + results.size());
-                        }
-                    });
+                    if(cancelledFlag.get()){
+                        Log.d(TAG, "Got response from client for "+title+" request was cancelled");
+                    }else{
+                        Log.d(TAG, "Got response from client for "+title+"...with number of parsed results:" + results.size());
+                        finalHolder.txtStatus.post(new Runnable(){
+                            @Override public void run() {
+                                finalHolder.txtStatus.setText("" + results.size());
+                            }
+                        });
+                    }
                 } catch (Exception e) {
                     finalHolder.txtStatus.post(new Runnable(){
                         @Override public void run() {
@@ -111,5 +123,6 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         TextView txtAuthor;
         TextView txtStatus;
         Future libraryStatusFuture;
+        AtomicBoolean cancelledFlag;
     }
 }
