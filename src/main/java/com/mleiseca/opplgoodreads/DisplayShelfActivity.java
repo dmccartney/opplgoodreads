@@ -80,7 +80,7 @@ public class DisplayShelfActivity extends RoboListActivity {
                                     objects =
                                     ImmutableList.copyOf(Iterables.transform(results, new Function<LibraryQueryResult, String>() {
                                         @Nullable @Override public String apply(@Nullable LibraryQueryResult libraryQueryResult) {
-                                            return libraryQueryResult == null ? "" : libraryQueryResult.getCallNumber();
+                                            return libraryQueryResult == null ? "" : libraryQueryResult.getCallNumber() + " (" + libraryQueryResult.getStatus()+")";
                                         }
                                     }));
                                 CharSequence[] data = objects.toArray(new CharSequence[objects.size()]);

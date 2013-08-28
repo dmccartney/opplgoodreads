@@ -90,10 +90,35 @@ public class Book {
         return Collections.unmodifiableList(ret);
     }
 
+    public String getFirstAuthor(){
+        if(authors == null){
+            return "";
+        }else{
+            AuthorInternal authorInternal = authors.get(0);
+            return authorInternal == null ? "" : authorInternal.name;
+        }
+    }
+
     @Root(strict = false)
     private static class AuthorInternal {
         @Element
         int id;
+
+        @Element
+        String name;
+
+//        <authors>
+//        <author>
+//        <id>526389</id>
+//        <name>Gerald Grant</name>
+//        <image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-200x266-b0aaccaa9663f92f58dd54112a869d72.jpg]]></image_url>
+//        <small_image_url><![CDATA[http://www.goodreads.com/assets/nophoto/nophoto-U-50x66-251a730d696018971ef4a443cdeaae05.jpg]]></small_image_url>
+//        <link><![CDATA[http://www.goodreads.com/author/show/526389.Gerald_Grant]]></link>
+//        <average_rating>3.47</average_rating>
+//        <ratings_count>90</ratings_count>
+//        <text_reviews_count>23</text_reviews_count>
+//        </author>
+//        </authors>
     }
 
     @Element(required = false)

@@ -88,7 +88,7 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         Review review = data[position];
         final RewiewHolder finalHolder = holder;
         final String title = review.getBook().getTitle();
-        final String authorName = extractAuthorName(review);
+        final String authorName = review.getBook().getFirstAuthor();
         final AtomicBoolean cancelledFlag = new AtomicBoolean(false);
         holder.txtTitle.setText(title);
         holder.txtAuthor.setText(authorName);
@@ -126,20 +126,10 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
 
     }
 
-    private String extractAuthorName(Review review) {
-        if(review.getBook().getAuthors().isEmpty()){
-            return "";
-        }else{
-//            review.getBook().getAuthors().get(0).g
-            //todo: ugh
-            return "";
-        }
-    }
-
     public List<LibraryQueryResult> getLibraryDataForPosition(int position) throws Exception {
         Review review = data[position];
         final String title = review.getBook().getTitle();
-        final String authorName = extractAuthorName(review);
+        final String authorName = review.getBook().getFirstAuthor();
 
         return libraryData.get(new LibraryQuery(authorName, title, ""));
     }
