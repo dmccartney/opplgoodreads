@@ -1,5 +1,10 @@
 package com.mleiseca.opplgoodreads;
 
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
+import com.google.common.collect.MapMaker;
+
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
@@ -18,6 +23,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -32,6 +38,16 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
     ChicagoSwanClient client;
     ExecutorService executorService;
 
+    LoadingCache<LibraryQuery, List<LibraryQueryResult>> libraryData = CacheBuilder.newBuilder()
+        .maximumSize(10000)
+        .expireAfterWrite(10, TimeUnit.MINUTES)
+        .build(
+            new CacheLoader<LibraryQuery, List<LibraryQueryResult>>() {
+                public List<LibraryQueryResult> load(LibraryQuery key) throws Exception {
+                    return client.performQuery(key);
+                }
+            });
+
     public ReviewAdapter(Context context, int layoutResourceId, Review[] data) {
         super(context, layoutResourceId, data);
         this.layoutResourceId = layoutResourceId;
@@ -41,7 +57,7 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         executorService = Executors.newFixedThreadPool(5);
     }
 
-    @Override public View getView(int position, View convertView, ViewGroup parent) {
+    @Override public View getView(final int position, View convertView, ViewGroup parent) {
         View row = convertView;
         RewiewHolder holder = null;
 
@@ -81,14 +97,16 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         holder.libraryStatusFuture = executorService.submit(new Runnable() {
             @Override public void run() {
                 try {
-                    final List<LibraryQueryResult> results = client.performQuery(new LibraryQuery(authorName, title, ""));
+                    final List<LibraryQueryResult> results = libraryData.get(new LibraryQuery(authorName, title, ""));
+
                     if(cancelledFlag.get()){
                         Log.d(TAG, "Got response from client for "+title+" request was cancelled");
                     }else{
                         Log.d(TAG, "Got response from client for "+title+"...with number of parsed results:" + results.size());
                         finalHolder.txtStatus.post(new Runnable(){
                             @Override public void run() {
-                                finalHolder.txtStatus.setText("" + results.size());
+                                int size = results.size();
+                                finalHolder.txtStatus.setText("" + (size == 0 ? "-" : size));
                             }
                         });
                     }
