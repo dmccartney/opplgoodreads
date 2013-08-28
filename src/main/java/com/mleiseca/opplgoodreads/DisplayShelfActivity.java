@@ -1,17 +1,25 @@
 package com.mleiseca.opplgoodreads;
 
+import com.google.common.base.Function;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListAdapter;
+import android.widget.AdapterView;
 
+import com.mleiseca.opplgoodreads.libraries.LibraryQueryResult;
 import com.mleiseca.opplgoodreads.xml.objects.Review;
 
 import java.util.List;
+
+import javax.annotation.Nullable;
 
 import roboguice.activity.RoboListActivity;
 
@@ -26,6 +34,7 @@ public class DisplayShelfActivity extends RoboListActivity {
     ProgressDialog pd;
     private Context context;
 
+    transient ReviewAdapter reviewAdapter;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    //To change body of overridden methods use File | Settings | File Templates.
@@ -54,10 +63,48 @@ public class DisplayShelfActivity extends RoboListActivity {
                 pd.dismiss();
                 pd = null;
 
+                getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                        try {
+                            //todo: ack! +1 because of the header!
+                            if(position == 0){
+                                return;
+                            }
+                            List<LibraryQueryResult> results = reviewAdapter.getLibraryDataForPosition(position - 1);
+                            if(results.size() > 0){
+                                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                                builder.setTitle("Locations");
+//                                builder.setTitle(R.string.pick_color);
+                                ImmutableList<String>
+                                    objects =
+                                    ImmutableList.copyOf(Iterables.transform(results, new Function<LibraryQueryResult, String>() {
+                                        @Nullable @Override public String apply(@Nullable LibraryQueryResult libraryQueryResult) {
+                                            return libraryQueryResult == null ? "" : libraryQueryResult.getCallNumber();
+                                        }
+                                    }));
+                                CharSequence[] data = objects.toArray(new CharSequence[objects.size()]);
+
+                                builder.setItems(data, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        // The 'which' argument contains the index position
+                                        // of the selected item
+                                    }
+                                });
+
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        }
+                    }
+                });
+
                 getListView().post(new Runnable() {
                     @Override public void run() {
-                        final ListAdapter adapter = new ReviewAdapter(context,R.layout.shelf_item_row, reviews.toArray(new Review[reviews.size()]));
-                        getListView().setAdapter(adapter);
+                        reviewAdapter = new ReviewAdapter(context,R.layout.shelf_item_row, reviews.toArray(new Review[reviews.size()]));
+                        getListView().setAdapter(reviewAdapter);
                     }
                 });
 

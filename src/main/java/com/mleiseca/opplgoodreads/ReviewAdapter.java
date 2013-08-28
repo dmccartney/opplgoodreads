@@ -97,7 +97,7 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
         holder.libraryStatusFuture = executorService.submit(new Runnable() {
             @Override public void run() {
                 try {
-                    final List<LibraryQueryResult> results = libraryData.get(new LibraryQuery(authorName, title, ""));
+                    final List<LibraryQueryResult> results = getLibraryDataForPosition(position);
 
                     if(cancelledFlag.get()){
                         Log.d(TAG, "Got response from client for "+title+" request was cancelled");
@@ -134,6 +134,14 @@ public class ReviewAdapter extends ArrayAdapter<Review> {
             //todo: ugh
             return "";
         }
+    }
+
+    public List<LibraryQueryResult> getLibraryDataForPosition(int position) throws Exception {
+        Review review = data[position];
+        final String title = review.getBook().getTitle();
+        final String authorName = extractAuthorName(review);
+
+        return libraryData.get(new LibraryQuery(authorName, title, ""));
     }
 
     private static class RewiewHolder {
