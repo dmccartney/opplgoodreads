@@ -249,8 +249,8 @@ public class GoodreadsAPI {
         return mContext.getSharedPreferences(SHARED_PREF_FILENAME, Activity.MODE_PRIVATE);
     }
 
-    public List<Review> retrieveBooksOnShelf(String shelfName){
-        List<Review> ret = null;
+    public ReviewsListResponse retrieveBooksOnShelf(String shelfName){
+        ReviewsListResponse ret = null;
 
         try {
             Map<String, String> params = new HashMap<String, String>();
@@ -265,10 +265,7 @@ public class GoodreadsAPI {
 
             Serializer serializer = new Persister();
 
-            ReviewsListResponse response = serializer.read(ReviewsListResponse.class, output);
-            if (response != null) {
-                ret = response.getReviews();
-            }
+            ret = serializer.read(ReviewsListResponse.class, output);
         } catch (Exception e) {
             Log.e(TAG, "Exception", e);
         }

@@ -27,8 +27,11 @@ public class ReviewsListResponseTest {
 
         ReviewsListResponse response = serializer.read(ReviewsListResponse.class, input);
 
-        assertThat(response.getReviews().size(), is(20));
-        assertThat(response.getReviews().get(0).getBook().getTitle(), is("Eyeball to Eyeball"));
-        assertThat(response.getReviews().get(0).getBook().getAuthors().size(), is(1));
+        assertThat(response.getStart(), is(1));
+        assertThat(response.getEnd(), is(20));
+        assertThat(response.getTotal(), is(379));
+        assertThat(response.getReviewList().size(), is(20));
+        assertThat(response.getReviewList().get(0).getBook().getTitle(), is("Eyeball to Eyeball"));
+        assertThat(response.getReviewList().get(0).getBook().getAuthors().size(), is(1));
     }
 }
